@@ -1,16 +1,16 @@
-﻿using TennisGame.ScoreBoard;
+﻿using TennisGame.data;
 
 Console.WriteLine("Hello, World!");
 
-bool running = true;
 ScoreBoard scoreBoard = new ScoreBoard(); 
 
 
-while (running)
+while (!scoreBoard.Finished)
 {
-    Console.WriteLine(scoreBoard.Score());
+    Display.RefreshDisplay(scoreBoard);
 
     scoreBoard.AddScore();
+
 
 
 }

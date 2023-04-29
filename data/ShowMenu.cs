@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TennisGame.ScoreBoard
+namespace TennisGame.data
 {
     internal class ShowMenu
     {

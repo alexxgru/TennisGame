@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace TennisGame.ScoreBoard
+namespace TennisGame.data
 {
     public class ScoreBoard
     {
         public int ScorePlayer1 { get; set; } = 0;
         public int ScorePlayer2 { get; set; } = 0;
-
+        public bool Finished { get; set; } = false;
+        
         public ScoreBoard() { }
 
         public string Score()
