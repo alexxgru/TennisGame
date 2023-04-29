@@ -5,11 +5,16 @@ Console.WriteLine("Hello, World!");
 ScoreBoard scoreBoard = new ScoreBoard(); 
 
 
-while (!scoreBoard.Finished)
+while (!scoreBoard.Finished || true)
 {
     Display.RefreshDisplay(scoreBoard);
 
-    scoreBoard.AddScore();
+    scoreBoard.CheckResults();
+
+    if (!scoreBoard.Finished || true)
+    {
+        scoreBoard.AddScore();
+    }
 
 
 
