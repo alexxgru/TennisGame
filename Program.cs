@@ -1,19 +1,28 @@
 ﻿using TennisGame.data;
 
-Console.WriteLine("Hello, World!");
-
 ScoreBoard scoreBoard = new ScoreBoard(); 
 
 
 while (!scoreBoard.Finished || true)
 {
+    scoreBoard.CheckResults();
+     
     Display.RefreshDisplay(scoreBoard);
 
-    scoreBoard.CheckResults();
-
-    if (!scoreBoard.Finished || true)
+    if (!scoreBoard.Finished)
     {
         scoreBoard.AddScore();
+    }
+    else
+    {
+        if (Display.ReplayPrompt())
+        {
+            scoreBoard = new ScoreBoard();
+        }
+        else
+        {
+            break;
+        }
     }
 
 

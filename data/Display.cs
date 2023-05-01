@@ -15,12 +15,18 @@ namespace TennisGame.data
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("         " + scoreBoard.Score());
+            Console.WriteLine(scoreBoard.Score());
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("-----------------------------------");
 
+        }
+
+        public static bool ReplayPrompt()
+        {
+            int selected = ShowMenu.Menu("Play Again", new[] { "Yes", "No" });
+            return selected == 0;
         }
 
     }
