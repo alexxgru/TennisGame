@@ -11,15 +11,28 @@ namespace TennisGame.data
         public static void RefreshDisplay(ScoreBoard scoreBoard)
         {
             Console.Clear();
-            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("                       " + scoreBoard.SetScore());
+            Console.WriteLine("--------------------------------------------------------------");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine(scoreBoard.Score());
+            Console.WriteLine("       " + scoreBoard.Score());
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("--------------------------------------------------------------");
+            Console.WriteLine();
+
+            if (scoreBoard.GameWinner != "")
+            {
+                Thread.Sleep(1500);
+                scoreBoard.ResetGame();
+
+                if (scoreBoard.SetWinner == "")
+                {
+                    RefreshDisplay(scoreBoard); 
+                }
+            }
 
         }
 

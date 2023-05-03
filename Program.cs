@@ -3,7 +3,7 @@
 ScoreBoard scoreBoard = new ScoreBoard(); 
 
 
-while (!scoreBoard.Finished || true)
+while (!scoreBoard.Finished)
 {
     scoreBoard.CheckResults();
      

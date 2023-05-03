@@ -8,6 +8,8 @@ namespace TennisGame.data
 {
     internal class ShowMenu
     {
+
+        //Denna metod har jag använt mig av väldigt mycket i mina tidigare projekt för att lägga till interaktivitet
         public static int Menu(string prompt, IEnumerable<string> options)
         {
             if (options == null || options.Count() == 0)
